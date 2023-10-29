@@ -1,0 +1,5 @@
+javac B1.java
+javah -jni B1
+locate jni.h
+gcc -I... -I.../linux -o libhello.so -shared -fPIC B1.c
+java -Djava.library.path=. B1
